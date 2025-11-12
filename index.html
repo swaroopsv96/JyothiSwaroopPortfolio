@@ -3,108 +3,160 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Jyothi Swaroop | Software Engineer Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
-  <title>Jyothi Swaroop | Portfolio</title>
   <style>
     :root {
-      --accent: #4456fa;
-      --accent-light: #eaf0ff;
-      --bg: #fbfbfd;
-      --card-bg: #fff;
-      --shadow: 0 4px 32px rgba(44,48,80,0.10);
-      --text-main: #172146;
-      --text-muted: #607089;
+      --main-bg: #151a23;
+      --main-bg-alt: #181f2b;
+      --text-main: #e1e6ef;
+      --text-muted: #8fa1c7;
+      --accent: #24ffd6;
+      --accent2: #527fff;
+      --card-bg: #20293a;
+      --code-bg: #181f2b;
+      --shadow: 0 2px 24px rgba(36,255,214,0.09);
     }
+    html, body {margin:0; padding:0;}
     body {
-      font-family: 'Segoe UI', 'Arial', sans-serif;
-      background: var(--bg);
+      background: var(--main-bg);
+      font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
       color: var(--text-main);
-      margin: 0; padding: 0;
+      margin: 0;
     }
     .header {
-      background: linear-gradient(90deg, var(--accent) 40%, #38c4f5 100%);
-      color: #fff;
+      padding: 36px 0 22px 0;
+      background: linear-gradient(135deg, var(--main-bg) 64%, #0f1923 100%);
       text-align: center;
-      padding: 42px 20px 32px 20px;
-      border-radius: 0 0 2.5em 2.5em;
+      border-bottom: 3px solid var(--accent);
+      box-shadow: 0 2px 16px rgba(24,255,214,0.08);
     }
     .profile-img {
-      width: 120px; height: 120px; object-fit: cover;
+      width: 112px; height: 112px; object-fit: cover;
       border-radius: 50%;
-      border: 4px solid #fff;
-      margin-bottom: 12px;
-      box-shadow: var(--shadow);
+      border: 3px solid var(--accent2);
+      margin-bottom: 18px;
+      background: #fff2;
+      box-shadow: 0 1px 10px var(--accent2);
     }
     h1 {
-      font-size: 2.5em; margin: 14px 0 3px;
+      font-size: 2.5em;
+      color: var(--accent); 
+      font-weight: 700;
+      margin: 0 0 8px;
+      letter-spacing: 0.09em;
+      font-family: 'Segoe UI', 'Tahoma', monospace, monospace;
     }
-    .subtitle { font-size: 1.3em; color: #eef3fe; font-weight: 500;}
+    .subtitle {
+      font-size: 1.08em;
+      letter-spacing: 1.2px;
+      color: var(--accent2);
+      font-weight: 500;
+      margin-bottom: 19px;
+    }
+    .links {
+      margin: 16px 0 0 0;
+    }
     .links a {
-      color: #fff; 
-      margin: 0 14px; 
-      font-size: 1.2em; 
-      vertical-align: middle; 
-      font-weight: 500; 
-      letter-spacing: 0.2px;
-      text-decoration: none; 
-      transition: opacity .18s;
+      margin: 0 16px; padding: 5px 0;
+      color: var(--accent);
+      font-size: 1.6em;
+      transition: color .2s, transform .2s;
+      display: inline-block;
+      vertical-align: middle;
     }
-    .links a:hover { opacity: .7; text-decoration: underline;}
-    .main-content { max-width: 900px; margin: 28px auto; padding: 14px 18px;}
-    .section { margin-bottom: 46px; }
-    h2 { color: var(--accent); margin-bottom: 18px; letter-spacing: 0.1em; font-size: 1.5em; }
-    .skills-list, .edu-list { display: flex; flex-wrap: wrap; gap: 20px; }
-    .skills-item, .edu-item { background: var(--accent-light); padding: 10px 18px; border-radius: 9px; font-size: 1em; }
-    .info-cards { display: flex; gap: 22px; flex-wrap: wrap; }
+    .links a:hover {color: #fff; transform: scale(1.18);}
+    .main-content {
+      max-width: 900px;
+      margin: 34px auto 0;
+      padding: 0 18px 60px 18px;
+    }
+    .section {margin-bottom: 56px;}
+    h2 {
+      color: var(--accent2);
+      font-family: 'Segoe UI', monospace, monospace;
+      margin-bottom: 12px;
+      margin-top: 7px;
+      letter-spacing: 2px;
+      border-left: 4px solid var(--accent);
+      padding-left: 12px;
+    }
+    .codeblock {
+      background: var(--code-bg);
+      border-radius: 8px;
+      padding: 20px 19px 12px 19px;
+      margin: 16px 0 16px 0;
+      font-size: 1.06em;
+      box-shadow: 0 2px 32px rgba(36,255,214,0.04);
+      color: #74fafe;
+      font-family: 'Fira Mono', 'Menlo', 'Consolas', monospace;
+    }
+    .skills-list, .edu-list { display: flex; flex-wrap: wrap; gap: 18px; }
+    .skills-item, .edu-item {
+      background: var(--card-bg);
+      padding: 9px 14px; border-radius: 9px;
+      font-size: 1em; color: #95bfff;
+      border-left: 2px solid var(--accent2);
+      margin-bottom: 7px;
+    }
+    .info-cards {
+      display: flex; flex-wrap: wrap; gap: 23px;
+    }
     .card {
-      flex: 1 1 348px; min-width: 290px;
-      background: var(--card-bg); border-radius: 1.2em; padding: 24px 23px 17px 23px; box-shadow: var(--shadow);
-      margin-bottom: 18px;
-      display: flex; flex-direction: column; justify-content: space-between;
+      flex: 1 1 340px; min-width: 260px;
+      background: var(--card-bg);
+      border-radius: 1.1em;
+      padding: 23px 21px 13px 21px;
+      box-shadow: var(--shadow);
+      margin-bottom: 16px;
+      border-left: 4px solid var(--accent);
     }
-    .card-header { font-weight: bold; font-size: 1.1em; color: var(--accent);}
-    .card-date { font-size: 0.98em; color: var(--text-muted);}
-    .project-list { display: flex; flex-wrap: wrap; gap: 21px; }
-    .project-card { background: #fafbff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 20px rgba(44,70,115,0.07);}
-    .project-title { color: var(--accent); font-weight: 600; font-size: 1.05em; margin-bottom: 6px;}
-    @media (max-width: 650px) {
-      .info-cards, .project-list { flex-direction: column; gap: 0;}
-      .skills-list, .edu-list { flex-direction: column; gap: 8px;}
-      .main-content { padding: 8px;}
+    .card-header { color: var(--accent2); font-weight: bold; font-size: 1.13em;}
+    .card-date { color: #8fa1c7; font-size: .96em;}
+    .card ul {margin-left: 15px;}
+    .project-list {display: flex; flex-wrap: wrap; gap: 19px;}
+    .project-card {
+      background: #222f38;
+      border-left: 3px solid var(--accent2);
+      border-radius: 10px;
+      padding: 18px;
+      color: #aafaf0;
+      font-size: 1em;
+      min-width: 250px;
+      flex: 1 1 270px;
+      margin-bottom: 7px;
+    }
+    .project-title { color: var(--accent); font-weight: bold; font-size: 1.12em;}
+    @media (max-width: 700px) {
+      .info-cards, .project-list, .skills-list, .edu-list {flex-direction: column; gap: 0;}
+      .main-content { padding: 5px;}
+      .header {padding: 22px 0 18px 0;}
     }
   </style>
 </head>
 <body>
   <div class="header">
     <img src="_DSC0216.JPG" alt="Profile" class="profile-img"/>
-    <h1>Jyothi Swaroop</h1>
+    <h1>&lt; Jyothi Swaroop /&gt;</h1>
     <div class="subtitle">Senior Software Engineer</div>
     <div class="links">
-      <a href="mailto:swaroopsv96@gmail.com" title="Email">
-        <i class="fa-solid fa-envelope"></i>
-      </a>
-      <a href="https://linkedin.com/in/swarp" target="_blank" title="LinkedIn">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-      <a href="https://github.com/swaroopsv96?tab=repositories" target="_blank" title="GitHub">
-        <i class="fa-brands fa-github"></i>
-      </a>
-      <a href="YOUR_PORTFOLIO_URL" target="_blank" title="Portfolio">
-        <i class="fa-solid fa-globe"></i>
-      </a>
+      <a href="mailto:swaroopsv96@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+      <a href="https://linkedin.com/in/swarp" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/swaroopsv96?tab=repositories" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="YOUR_PORTFOLIO_URL" target="_blank" title="Portfolio"><i class="fa-solid fa-globe"></i></a>
     </div>
+    <div class="codeblock">// Portfolio Theme: Software Engineer</div>
   </div>
-
   <div class="main-content">
-
     <div class="section">
       <h2>About Me</h2>
-      <p>
-        Experienced engineer with 5+ years building robust distributed systems, APIs, and automation tools to accelerate fast-moving teams.<br>
-        Adept in Python, Java, cloud architecture, and delivering cross-functional business results with innovation and reliability.
-      </p>
+      <div class="codeblock">
+        <span style="color:#96fa90;">// Experienced engineer with 5+ years building robust distributed systems, API's, and automation tools to power growth.</span><br>
+        <span style="color:#97ffff;">function</span> <span style="color:#bbcfff;">deliverResults</span>() {<br>
+        &nbsp;&nbsp;<span style="color:#f5f6ff;">return</span> <span style="color:#ffef8b;">innovation</span> + <span style="color:#fa9fda;">teamwork</span> + <span style="color:#53ebff;">reliability</span>;<br>
+        }
+      </div>
     </div>
-
     <div class="section">
       <h2>Technical Skills</h2>
       <div class="skills-list">
@@ -115,54 +167,46 @@
         <div class="skills-item">CI/CD, GitHub Actions, Selenium, Agile</div>
       </div>
     </div>
-
     <div class="section">
       <h2>Experience</h2>
       <div class="info-cards">
         <div class="card">
-          <div>
           <div class="card-header">Software Engineer II — Bozzuto’s Inc</div>
           <div class="card-date">Aug 2023 – Present, New York NY</div>
             <ul>
-              <li>Led API/platform redesign using Spring Boot & AWS to digitize warehouse ops, boosting efficiency.</li>
-              <li>Migrated frontend to Vue.js, cutting latency by 60% and transforming UX.</li>
-              <li>Developed auditing apps (Android/iOS) with 100% adoption for productivity gains.</li>
-              <li>Instituted RBAC automation for compliance, and reduced bugs through testing and on-call excellence.</li>
+              <li>Led API/platform redesign with Spring Boot & AWS to digitize ops.</li>
+              <li>Migrated frontend to Vue.js, cutting latency 60%+ for users.</li>
+              <li>Developed Android/iOS auditing apps with 100% adoption.</li>
+              <li>Instituted RBAC automation and improved on-call/test protocols.</li>
             </ul>
-          </div>
         </div>
         <div class="card">
-          <div>
           <div class="card-header">Software Engineer — VVDN Technologies</div>
           <div class="card-date">Jun 2018 – Jun 2021, Chennai, India</div>
             <ul>
-              <li>Created robust CI/CD and automation frameworks in Python/Django.</li>
-              <li>Designed scalable backend logic and analytics solutions for data-driven businesses.</li>
-              <li>Drove Agile delivery and improved team performance through mentoring and process optimization.</li>
+              <li>Built CI/CD and back-end logic in Python/Django.</li>
+              <li>Engineered analytics solutions; drove Agile and mentoring success.</li>
             </ul>
-          </div>
         </div>
       </div>
     </div>
-
     <div class="section">
       <h2>Key Projects</h2>
       <div class="project-list">
         <div class="project-card">
           <div class="project-title">Claims Processing System</div>
-          Centralized insurance claims with OAuth, Redis caching, and real-time updates for better user transparency.
+          Centralized insurance claims, real-time updates, OAuth security, Redis cache.
         </div>
         <div class="project-card">
           <div class="project-title">Cloud-Native Microservices</div>
-          Deployed Spring Boot apps on AWS/Kubernetes with Docker and CI/CD for scalable, cloud-first delivery.
+          Deployed Spring Boot on AWS/Kubernetes via Docker & CI/CD.
         </div>
         <div class="project-card">
           <div class="project-title">Credit Score Analyzer</div>
-          Built analytics with Kafka, Redis, and AWS to power fast, data-driven financial decisions.
+          Built fast analytics using Kafka, Redis, and AWS.
         </div>
       </div>
     </div>
-
     <div class="section">
       <h2>Education</h2>
       <div class="edu-list">
