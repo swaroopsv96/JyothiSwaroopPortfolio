@@ -1,90 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jyothi Swaroop | Software Engineer Portfolio</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Jyothi Swaroop | Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f7f7f7; }
-    .container { max-width: 780px; margin: 32px auto; background: #fff; border-radius: 10px; padding: 32px; box-shadow: 0 2px 9px rgba(0,0,0,0.08);}
-    h1 { font-size: 2.5em; margin: 0 0 0.2em; }
-    h2 { border-bottom: 2px solid #e0e0e0; padding-bottom: 4px; color: #364CAC; }
-    .contact { font-size: 1.1em; margin-bottom: 22px; }
-    .skills, .experience, .projects, .education, .leadership {margin-bottom: 33px;}
-    ul { padding-left: 20px; }
-    .subtitle { color: #888; font-size: .96em;}
-    .job-title { font-weight: bold; margin-top: 18px;}
-    .org { color: #364CAC;}
-    .project-title { font-weight: bold; }
-    .date { float: right; color: #888; font-weight: normal;}
-    .profile-pic { float: right; height: 112px; border-radius: 12px; margin-left: 24px; object-fit: cover; background: #eaeaea;}
-    @media (max-width: 600px) {
-      .container { padding: 12px; }
-      .profile-pic { float: none; display: block; margin: 0 auto 18px; }
+    :root {
+      --accent: #4456fa;
+      --accent-light: #eaf0ff;
+      --bg: #fbfbfd;
+      --card-bg: #fff;
+      --shadow: 0 4px 32px rgba(44,48,80,0.10);
+      --text-main: #172146;
+      --text-muted: #607089;
+    }
+    body {
+      font-family: 'Segoe UI', 'Arial', sans-serif;
+      background: var(--bg);
+      color: var(--text-main);
+      margin: 0; padding: 0;
+    }
+    .header {
+      background: linear-gradient(90deg, var(--accent) 40%, #38c4f5 100%);
+      color: #fff;
+      text-align: center;
+      padding: 42px 20px 32px 20px;
+      border-radius: 0 0 2.5em 2.5em;
+    }
+    .profile-img {
+      width: 120px; height: 120px; object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+    }
+    h1 {
+      font-size: 2.5em; margin: 14px 0 3px;
+    }
+    .subtitle { font-size: 1.3em; color: #eef3fe; font-weight: 500;}
+    .links a {
+      color: #fff; margin: 0 14px; font-weight: 500; letter-spacing: 0.2px;
+      text-decoration: none; transition: opacity .18s;
+    }
+    .links a:hover { opacity: .7; text-decoration: underline;}
+    .main-content { max-width: 900px; margin: 28px auto; padding: 14px 18px;}
+    .section { margin-bottom: 46px; }
+    h2 { color: var(--accent); margin-bottom: 18px; letter-spacing: 0.1em; font-size: 1.5em; }
+    .skills-list, .edu-list { display: flex; flex-wrap: wrap; gap: 20px; }
+    .skills-item, .edu-item { background: var(--accent-light); padding: 10px 18px; border-radius: 9px; font-size: 1em; }
+    .info-cards { display: flex; gap: 22px; flex-wrap: wrap; }
+    .card {
+      flex: 1 1 348px; min-width: 290px;
+      background: var(--card-bg); border-radius: 1.2em; padding: 24px 23px 17px 23px; box-shadow: var(--shadow);
+      margin-bottom: 18px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .card-header { font-weight: bold; font-size: 1.1em; color: var(--accent);}
+    .card-date { font-size: 0.98em; color: var(--text-muted);}
+    .project-list { display: flex; flex-wrap: wrap; gap: 21px; }
+    .project-card { background: #fafbff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 20px rgba(44,70,115,0.07);}
+    .project-title { color: var(--accent); font-weight: 600; font-size: 1.05em; margin-bottom: 6px;}
+    @media (max-width: 650px) {
+      .info-cards, .project-list { flex-direction: column; gap: 0;}
+      .skills-list, .edu-list { flex-direction: column; gap: 8px;}
+      .main-content { padding: 8px;}
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="YOUR_PROFILE_PHOTO_URL" alt="Jyothi Swaroop" class="profile-pic" />
+  <div class="header">
+    <img src="YOUR_PROFILE_PHOTO_URL" alt="Profile" class="profile-img"/>
     <h1>Jyothi Swaroop</h1>
-    <div class="contact">
-      New York, NY &nbsp; • &nbsp; <a href="mailto:swaroopsv96@gmail.com">swaroopsv96@gmail.com</a><br>
-      <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a> &nbsp; | &nbsp; <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a> &nbsp; | &nbsp; <a href="YOUR_PORTFOLIO_URL" target="_blank">Portfolio</a>
+    <div class="subtitle">Senior Software Engineer</div>
+    <div class="links">
+      <a href="mailto:swaroopsv96@gmail.com">Email</a>
+      <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">LinkedIn</a>
+      <a href="https://github.com/YOUR_GITHUB" target="_blank">GitHub</a>
+      <a href="YOUR_PORTFOLIO_URL" target="_blank">Portfolio</a>
+    </div>
+  </div>
+
+  <div class="main-content">
+
+    <div class="section">
+      <h2>About Me</h2>
+      <p>
+        Experienced engineer with 5+ years building robust distributed systems, APIs, and automation tools to accelerate fast-moving teams.<br>
+        Adept in Python, Java, cloud architecture, and delivering cross-functional business results with innovation and reliability.
+      </p>
     </div>
 
-    <h2>Professional Summary</h2>
-    <p>
-      Software Engineer with 5+ years’ experience architecting scalable distributed systems and developer tools for high-growth teams.<br>
-      Expert in Python, Java, AWS, and workflow automation, accelerating engineering projects and product delivery.<br>
-      Passionate about designing production-ready, event-driven platforms and mentoring teams to deliver robust, impactful solutions.
-    </p>
-
-    <h2>Technical Skills</h2>
-    <ul class="skills">
-      <li><strong>Languages:</strong> Java, Python, Kotlin, JavaScript, Swift</li>
-      <li><strong>Frameworks:</strong> Spring Boot, Django, Node.js, React.js, Vue.js</li>
-      <li><strong>Cloud/Infra:</strong> AWS, GCP, Docker, Kubernetes, Jenkins, CI/CD, PostgreSQL, MongoDB, DynamoDB, Redis</li>
-      <li><strong>Developer Tools:</strong> Git, GitHub Actions, JIRA, Confluence, Postman, Android SDK</li>
-    </ul>
-
-    <h2>Experience</h2>
-    <div class="experience">
-      <div class="job-title org">Software Engineer II <span class="date">Bozzuto’s Inc | Aug 2023 – Present</span></div>
-      <ul>
-        <li>Led high-impact API development (Spring Boot, AWS) for warehouse and supply chain, streamlining core business workflows.</li>
-        <li>Migrated legacy systems to Vue.js frontend, reducing client-server latency by 60%, and delivering measurable UX improvements.</li>
-        <li>Designed and delivered auditing mobile apps (Kotlin, Swift) with 100% adoption and enhanced productivity.</li>
-        <li>Developed role-based access controls and automated document workflows, ensuring compliance and security.</li>
-        <li>Collaborated across teams, driving down production bugs and mentoring engineers on code quality, testing, and on-call readiness.</li>
-      </ul>
-      <div class="job-title org">Software Engineer <span class="date">VVDN Technologies | Jun 2018 – Jun 2021</span></div>
-      <ul>
-        <li>Built automated test and deployment frameworks in Python/Django, boosting CI/CD effectiveness by 50%.</li>
-        <li>Developed backend analytics tools and business logic modules for enterprise data products.</li>
-        <li>Practiced Agile, supporting sprints and project delivery through user story validation and backlog management.</li>
-      </ul>
+    <div class="section">
+      <h2>Technical Skills</h2>
+      <div class="skills-list">
+        <div class="skills-item">Python, Java, Kotlin, JavaScript, Swift</div>
+        <div class="skills-item">Spring Boot, Django, Node.js, React, Vue</div>
+        <div class="skills-item">AWS, GCP, Kubernetes, Docker, Jenkins</div>
+        <div class="skills-item">REST API, GraphQL, Redis, PostgreSQL, MongoDB</div>
+        <div class="skills-item">CI/CD, GitHub Actions, Selenium, Agile</div>
+      </div>
     </div>
 
-    <h2>Projects</h2>
-    <ul class="projects">
-      <li><span class="project-title">Claims Processing System:</span> Created a central claims portal with real-time updates, OAuth security, and Redis caching to enhance customer transparency and performance.</li>
-      <li><span class="project-title">Cloud-Native Java Apps:</span> Deployed Spring Boot microservices on AWS/Kubernetes using Docker and CI/CD pipelines for robust, scalable cloud operations.</li>
-      <li><span class="project-title">Credit Score Analyzer:</span> Engineered a real-time analytics platform with Kafka and AWS, enabling fast, accurate credit decisions for financial services.</li>
-    </ul>
+    <div class="section">
+      <h2>Experience</h2>
+      <div class="info-cards">
+        <div class="card">
+          <div>
+          <div class="card-header">Software Engineer II — Bozzuto’s Inc</div>
+          <div class="card-date">Aug 2023 – Present, New York NY</div>
+            <ul>
+              <li>Led API/platform redesign using Spring Boot & AWS to digitize warehouse ops, boosting efficiency.</li>
+              <li>Migrated frontend to Vue.js, cutting latency by 60% and transforming UX.</li>
+              <li>Developed auditing apps (Android/iOS) with 100% adoption for productivity gains.</li>
+              <li>Instituted RBAC automation for compliance, and reduced bugs through testing and on-call excellence.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+          <div class="card-header">Software Engineer — VVDN Technologies</div>
+          <div class="card-date">Jun 2018 – Jun 2021, Chennai, India</div>
+            <ul>
+              <li>Created robust CI/CD and automation frameworks in Python/Django.</li>
+              <li>Designed scalable backend logic and analytics solutions for data-driven businesses.</li>
+              <li>Drove Agile delivery and improved team performance through mentoring and process optimization.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <h2>Education</h2>
-    <ul class="education">
-      <li>George Mason University — M.S. Computer Science (2023)</li>
-      <li>Anna University — B.E. Computer Science & Engineering (2018)</li>
-    </ul>
+    <div class="section">
+      <h2>Key Projects</h2>
+      <div class="project-list">
+        <div class="project-card">
+          <div class="project-title">Claims Processing System</div>
+          Centralized insurance claims with OAuth, Redis caching, and real-time updates for better user transparency.
+        </div>
+        <div class="project-card">
+          <div class="project-title">Cloud-Native Microservices</div>
+          Deployed Spring Boot apps on AWS/Kubernetes with Docker and CI/CD for scalable, cloud-first delivery.
+        </div>
+        <div class="project-card">
+          <div class="project-title">Credit Score Analyzer</div>
+          Built analytics with Kafka, Redis, and AWS to power fast, data-driven financial decisions.
+        </div>
+      </div>
+    </div>
 
-    <h2>Leadership & Values</h2>
-    <ul class="leadership">
-      <li>Advocate for code quality, documentation, and technical standards through reviews and tech talks.</li>
-      <li>Mentor engineers and lead cross-functional projects to foster collaboration and growth.</li>
-      <li>Committed to transparency, reliability, and delivering solutions that drive business value.</li>
-    </ul>
+    <div class="section">
+      <h2>Education</h2>
+      <div class="edu-list">
+        <div class="edu-item">M.S. Computer Science<br/>George Mason University, 2023</div>
+        <div class="edu-item">B.E. Computer Science & Engineering<br/>Anna University, 2018</div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
